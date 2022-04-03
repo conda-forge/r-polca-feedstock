@@ -1,4 +1,4 @@
-{% set version = '1.4.1' %}
+{% set version = "1.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/poLCA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/poLCA/poLCA_{{ version }}.tar.gz
-  sha256: 2e69975b5e7da8c36641bfa9453afdb4861523866b8799bec1d4eace9ab5762e
+  sha256: f0acc46abba9ff010749504aa08e9aae2a6b56b218a9e0ac54addf59af8ae1f9
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -47,11 +47,10 @@ test:
 about:
   home: http://dlinzer.github.com/poLCA
   license: GPL-2.0-or-later
-  summary: Latent class analysis and latent class regression models for polytomous outcome variables.  Also
-    known as latent structure analysis.
+  summary: Latent class analysis and latent class regression models for polytomous outcome variables.  Also known as latent structure analysis.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
