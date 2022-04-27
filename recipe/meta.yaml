@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "1.6.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/poLCA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/poLCA/poLCA_{{ version }}.tar.gz
-  sha256: f0acc46abba9ff010749504aa08e9aae2a6b56b218a9e0ac54addf59af8ae1f9
+  sha256: ed8c60a42bff0402c9ba2f9ce1422dd171e711c1a64498c4d96010ddb29f6b16
 
 build:
   merge_build_host: true  # [win]
