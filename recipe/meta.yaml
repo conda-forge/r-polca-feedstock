@@ -1,4 +1,4 @@
-{% set version = "1.6.0.1" %}
+{% set version = "1.6.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/poLCA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/poLCA/poLCA_{{ version }}.tar.gz
-  sha256: ed8c60a42bff0402c9ba2f9ce1422dd171e711c1a64498c4d96010ddb29f6b16
+  sha256: a388e9c96c41ab79f9f7b2baa36f6fba43f865e0c5e1d9c47e2ac528c197e358
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
